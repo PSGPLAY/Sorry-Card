@@ -118,11 +118,11 @@ body {
    font-size: 100px;
    margin-top: -50px;
 }
-.click-me{
+.click-me-up{
    position: absolute;
    margin: auto;
    top: 22%;
-   left: 60%;
+   left: 65%;
    display: flex;
    flex-direction: column;
    justify-content: space-around;
@@ -133,18 +133,31 @@ body {
    visibility: visible;
    transition: opacity 0.5s ease, visibility 2s ease, top 0.5s ease, left 0.5s ease;
 }
-.click-me p{
+.click-me-down{
+   position: absolute;
+   margin: auto;
+   top: 67%;
+   left: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   gap: -5px;
+   
+   opacity: 0;
+   visibility: visible;
+   transition: opacity 0.5s ease, visibility 2s ease, top 0.5s ease, left 0.5s ease;
+}
+.click-me-down p, .click-me-up p{
    font-size: large;
    font-weight: bold;
 }
-.click-me h1{
+.click-me-up h1{
    transform: rotate(180deg);
 }
-.card:hover ~ .click-me{
-   top: 65%;
-   left: 70%;
-   flex-flow: column-reverse;
+.card:hover ~ .click-me-up{
+   opacity: 0;
 }
-.card:hover ~ .click-me h1{
-   transform: rotate(0deg);
+.card:hover ~ .click-me-down{
+   opacity: 1;
 }
