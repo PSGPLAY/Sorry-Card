@@ -1,0 +1,135 @@
+*{
+   padding: 0;
+   margin: 0;
+   font-family: "Poppins", sans-serif;
+}
+
+audio {
+  display: none;
+}
+
+body {
+  background-color: #f199d1;
+}
+.card{
+   width: 400px;
+   height: 300px;
+   margin: auto;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   -webkit-perspective: 1200px;
+   perspective: 1200px;
+   transition: 1s;
+}
+.inside, .outside{
+   width: 50%;
+   height: 100%;
+   position: absolute;
+   left: 50.1%;
+   border: 1px solid black;
+}
+.inside{
+   background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+   text-align: center;
+}
+.first{
+   display: flex;
+   gap: 30px;
+   padding: 50px 0;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+.second{
+   display: none;
+   text-align: center;
+   margin-top: 40px;
+}
+.second p{
+   font-size: 15px;
+}
+.card:hover{
+   transform: rotate(-5deg);
+}
+.card:hover .outside{
+   transform: rotateY(-150deg);
+}
+.outside{
+   -webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+   z-index: 1;
+   transform-origin: left;
+   transition: 1.5s;
+}
+.front, .back{
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   transform: rotateX(0deg);
+}
+.front{
+   background-color: #ffffff;
+   text-align: center;
+   line-height: 3;
+}
+.back{
+   transform: rotateY(180deg);
+   background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+}
+.front p{
+   font-size: 25px;
+   margin-top: 30px;
+   text-transform: uppercase;
+   letter-spacing: 6px;
+   font-weight: bolder;
+   color: #037107;
+}
+.first p{
+   font-size: 20px;
+   line-height: 2;
+}
+.first h1{
+   font-size: 100px;
+}
+.first a{
+   text-decoration: none;
+}
+.front h1{
+   font-size: 100px;
+   margin-top: -50px;
+}
+.click-me{
+   position: absolute;
+   margin: auto;
+   top: 20%;
+   left: 60%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   gap: -5px;
+
+   opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 2s ease, top 0.5s ease, left 0.5s ease;
+}
+.click-me p{
+   font-size: large;
+   font-weight: bold;
+}
+.click-me h1{
+   transform: rotate(180deg);
+}
+.card:hover ~ .click-me{
+   top: 70%;
+   left: 70%;
+   flex-flow: column-reverse;
+}
+.card:hover ~ .click-me h1{
+   transform: rotate(0deg);
+}
