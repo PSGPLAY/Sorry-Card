@@ -4,9 +4,9 @@
    font-family: "Poppins", sans-serif;
 }
 
-/* audio {
+audio {
   display: none;
-} */
+}
 
 body {
   background-color: #f199d1;
@@ -143,7 +143,7 @@ body {
    justify-content: space-around;
    align-items: center;
    gap: -5px;
-
+   
    opacity: 0;
    visibility: visible;
    transition: opacity 0.5s ease, visibility 2s ease, top 0.5s ease, left 0.5s ease;

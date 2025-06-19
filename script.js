@@ -12,6 +12,8 @@ function back(){
    }, 200);
 }
 
-document.addEventListener("click", () => {
-  document.getElementById("bg-music").play();
+window.addEventListener("load", () => {
+  document.body.addEventListener("click", () => {
+    document.getElementById("bg-music").play();
+  }, { once: true });
 });
