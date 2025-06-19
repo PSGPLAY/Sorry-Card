@@ -11,3 +11,7 @@ function back(){
       document.getElementById("click-me").style.display = "block";
    }, 200);
 }
+
+document.addEventListener("click", () => {
+  document.getElementById("bg-music").play();
+});
